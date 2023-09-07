@@ -3,7 +3,7 @@ import { initialUser } from '@/lib/initialProfile'
 import { UserButton } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 import { prisma as db } from '@/lib/db'
-import { InitialModal } from '@/components/InitialModal'
+import { InitialModal } from '@/components/modals/InitialModal'
 
 export default async function Home() {
   const profile = await initialUser()

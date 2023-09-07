@@ -25,7 +25,7 @@ import { Button } from '@/components/ui/button'
 // import { FileUpload } from '@/components/file-upload'
 import { useRouter } from 'next/navigation'
 import { FormValues, formSchema } from '@/types/FormSchema'
-import FileUpload from './FileUpload'
+import FileUpload from '../FileUpload'
 
 export const InitialModal = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false)

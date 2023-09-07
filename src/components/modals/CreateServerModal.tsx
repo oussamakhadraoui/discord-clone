@@ -21,10 +21,10 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import {useModal} from '../hooks/use-modal-store'
+import {useModal} from '../../hooks/use-modal-store'
 import { useRouter } from 'next/navigation'
 import { FormValues, formSchema } from '@/types/FormSchema'
-import FileUpload from './FileUpload'
+import FileUpload from '../FileUpload'
 
 export const CreateServerModal = () => {
   
