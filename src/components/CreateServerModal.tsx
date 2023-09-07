@@ -3,8 +3,6 @@
 import axios from 'axios'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { useEffect, useState } from 'react'
-
 import {
   Dialog,
   DialogContent,
@@ -55,6 +53,7 @@ const isModalOpen = isOpen && type==='createServer'
 
       form.reset()
       router.refresh()
+      onClose()
       window.location.reload()
     } catch (error) {
       console.log(error)
