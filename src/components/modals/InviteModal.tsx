@@ -2,7 +2,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
@@ -51,7 +50,6 @@ export const InviteModal = () => {
     }
   }
 
-
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
       <DialogContent className='bg-white text-black p-0 overflow-hidden'>
@@ -66,6 +64,7 @@ export const InviteModal = () => {
           </Label>
           <div className='flex items-center mt-2 gap-x-2'>
             <Input
+              readOnly
               disabled={isLoading}
               className='bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0'
               value={inviteUrl}
