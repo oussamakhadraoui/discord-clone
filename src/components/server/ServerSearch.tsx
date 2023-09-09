@@ -61,7 +61,6 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
       return router.push(`/servers/${params?.serverId}/channels/${id}`)
     }
   }
-
   return (
     <>
       <button

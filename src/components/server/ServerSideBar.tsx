@@ -52,7 +52,7 @@ const ServerSideBar = async ({ serverId }: ServerSideBarProps) => {
   const members = server?.members.filter(
     (member) => member.profileId !== profile.id
   )
-  //remove ourself
+
 
   if (!server){
    return redirect('/')
