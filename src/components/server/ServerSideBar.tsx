@@ -8,6 +8,8 @@ import { ScrollArea } from '../ui/scroll-area'
 import { Hash, Mic, ShieldAlert, ShieldCheck, Video } from 'lucide-react'
 import { Separator } from '../ui/separator'
 import { ServerSearch } from './ServerSearch'
+import { ServerSection } from './ServerSection'
+import { ServerChannel } from './ServerChannel'
 
 interface ServerSideBarProps {
   serverId: string
@@ -174,7 +176,8 @@ const ServerSideBar = async ({ serverId }: ServerSideBarProps) => {
             />
             <div className='space-y-[2px]'>
               {members.map((member) => (
-                <ServerMember key={member.id} member={member} server={server} />
+                
+                <div key={member.id}></div>
               ))}
             </div>
           </div>
