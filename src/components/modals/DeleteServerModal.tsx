@@ -43,7 +43,7 @@ const DeleteServerModal = ({}: DeleteServerModalProps) => {
             Delete server
           </DialogTitle>
           <DialogDescription className='text-center text-zinc-500'>
-            Are you sure you want to delete
+            Are you sure you want to delete {" "}
             <span className='font-semibold text-indigo-500'>
               {server?.name}
             </span>
@@ -57,7 +57,7 @@ const DeleteServerModal = ({}: DeleteServerModalProps) => {
             </Button>
             <Button
               disabled={isLoading}
-              variant='primary'
+              variant='destructive'
               onClick={handleLeave}
             >
               confirm

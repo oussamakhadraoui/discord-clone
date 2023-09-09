@@ -57,7 +57,7 @@ const LeaveServerModal = ({}: LeaveServerModalProps) => {
             </Button>
             <Button
               disabled={isLoading}
-              variant='primary'
+              variant='destructive'
               onClick={handleLeave}
             >
               confirm
