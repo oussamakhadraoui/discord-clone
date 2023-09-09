@@ -3,7 +3,7 @@ import { redirectToSignIn } from '@clerk/nextjs'
 import React, { ReactNode } from 'react'
 import { prisma as db } from '@/lib/db'
 import { redirect } from 'next/navigation'
-import ServerSideBar from '@/components/navBar/ServerSideBar'
+import ServerSideBar from '@/components/server/ServerSideBar'
 interface layoutProps {
   children: ReactNode
   params: { serverId: string }
