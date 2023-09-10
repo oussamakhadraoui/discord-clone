@@ -10,6 +10,7 @@ import { Separator } from '../ui/separator'
 import { ServerSearch } from './ServerSearch'
 import { ServerSection } from './ServerSection'
 import { ServerChannel } from './ServerChannel'
+import { ServerMember } from './ServerMember'
 
 interface ServerSideBarProps {
   serverId: string
@@ -176,8 +177,7 @@ const ServerSideBar = async ({ serverId }: ServerSideBarProps) => {
             />
             <div className='space-y-[2px]'>
               {members.map((member) => (
-                // <ServerMember key={member.id} member={member} server={server} />
-                <div key={member.id}></div>
+                <ServerMember key={member.id} member={member} server={server} />             
               ))}
             </div>
           </div>
