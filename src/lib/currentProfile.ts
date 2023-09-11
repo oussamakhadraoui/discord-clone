@@ -1,8 +1,6 @@
 import { auth } from '@clerk/nextjs'
 import { prisma as db } from '@/lib/db'
 
-import React from 'react'
-
 const currentProfile = async () => {
   const { userId } = auth()
   if (!userId) {
