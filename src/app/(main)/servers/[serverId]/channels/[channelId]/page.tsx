@@ -7,6 +7,7 @@ import { ChannelType } from '@prisma/client'
 import { prisma as db } from '@/lib/db'
 import currentProfile from '@/lib/currentProfile'
 import ChatHeader from '@/components/chat/ChatHeader'
+import { ChatInput } from '@/components/chat/ChatInput'
 
 interface ChannelIdPageProps {
   params: {
@@ -61,7 +62,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
             }}
             paramKey='channelId'
             paramValue={channel.id}
-          />
+          /> */}
           <ChatInput
             name={channel.name}
             type='channel'
@@ -70,7 +71,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
               channelId: channel.id,
               serverId: channel.serverId,
             }}
-          /> */}
+          />
         </>
       )}
       {/* {channel.type === ChannelType.AUDIO && (
