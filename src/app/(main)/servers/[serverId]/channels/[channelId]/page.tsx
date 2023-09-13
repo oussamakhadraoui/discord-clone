@@ -8,6 +8,7 @@ import { prisma as db } from '@/lib/db'
 import currentProfile from '@/lib/currentProfile'
 import ChatHeader from '@/components/chat/ChatHeader'
 import { ChatInput } from '@/components/chat/ChatInput'
+import ChatMessages from '@/components/chat/ChatMsj'
 
 interface ChannelIdPageProps {
   params: {
@@ -49,7 +50,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
       />
       {channel.type === ChannelType.TEXT && (
         <>
-          {/* <ChatMessages
+          <ChatMessages
             member={member}
             name={channel.name}
             chatId={channel.id}
@@ -62,7 +63,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
             }}
             paramKey='channelId'
             paramValue={channel.id}
-          /> */}
+          />
           <ChatInput
             name={channel.name}
             type='channel'

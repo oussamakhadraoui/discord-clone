@@ -5,6 +5,8 @@ import { redirectToSignIn } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 
 import { prisma as db } from '@/lib/db'
+import { ChatInput } from '@/components/chat/ChatInput'
+import ChatMessages from '@/components/chat/ChatMsj'
 
 
 
@@ -62,7 +64,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
       />
       {/* {searchParams.video && (
         <MediaRoom chatId={conversation.id} video={true} audio={true} />
-      )}
+      )} */}
       {!searchParams.video && (
         <>
           <ChatMessages
@@ -87,7 +89,7 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
             }}
           />
         </>
-      )} */}
+      )}
     </div>
   )
 }
