@@ -6,7 +6,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponseServerIo
 ) {
-  if (req.method !== 'post') {
+  if (req.method !== 'POST') {
     return res.status(400).json({ message: 'This method does not exist!' })
   }
   try {
