@@ -6,6 +6,7 @@ import { format } from 'date-fns'
 import { Loader2, ServerCrash } from 'lucide-react'
 import UseChatQuery from '@/hooks/use-query-chat'
 import { ChatItem } from './ChatItem'
+import useChatIo from '@/hooks/use-chat-io'
 
 const DATE_FORMAT = 'd MMM yyyy, HH:mm'
 
@@ -34,9 +35,11 @@ const ChatMessages = ({
   type,
 }: ChatMessagesProps) => {
   const queryKey = `chat:${chatId}`
+  const addKey = `chat:${chatId}:messages`
+  const updateKey = `chat:${chatId}:messages:update` 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     UseChatQuery({ apiUrl, paramKey, paramValue, queryKey })
-
+   useChatIo({addKey,queryKey,updateKey})
   if (status === 'loading') {
     return (
       <div className='flex flex-col flex-1 justify-center items-center'>
