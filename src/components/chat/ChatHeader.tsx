@@ -3,6 +3,7 @@ import { Hash, Menu } from 'lucide-react'
 import MobileToggle from '../mobile/MobileToggle'
 import { UserAvatar } from '../UserAvatar'
 import { SocketBadge } from '../SocketBadge'
+import { ChatVideoButton } from './ChatVideoBtn'
 interface ChatHeaderProps {
   serverId: string
   name: string
@@ -17,9 +18,14 @@ const ChatHeader = ({ name, serverId, type, imageUrl }: ChatHeaderProps) => {
       {type === 'channel' && (
         <Hash className='w-5 h-5 text-zinc-500 dark:text-zinc-400 mr-2' />
       )}
-      {type==="conversation"&&(<UserAvatar src={imageUrl} className='h-8 w-8 mr-2'/>)}
+      {type === 'conversation' && (
+        <UserAvatar src={imageUrl} className='h-8 w-8 mr-2' />
+      )}
       <p className='font-semibold text-md text-black dark:text-white'>{name}</p>
-      <div className='ml-auto flex items-center '><SocketBadge/></div>
+      <div className='ml-auto flex items-center '>
+        {type === 'conversation' && <ChatVideoButton />}
+        <SocketBadge />
+      </div>
     </div>
   )
 }

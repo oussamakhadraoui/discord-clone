@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation'
 import { prisma as db } from '@/lib/db'
 import { ChatInput } from '@/components/chat/ChatInput'
 import ChatMessages from '@/components/chat/ChatMsj'
+import { MediaRoom } from '@/components/MediaCall'
 
 
 
@@ -62,9 +63,9 @@ const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
         serverId={params.serverId}
         type='conversation'
       />
-      {/* {searchParams.video && (
+      {searchParams.video && (
         <MediaRoom chatId={conversation.id} video={true} audio={true} />
-      )} */}
+      )}
       {!searchParams.video && (
         <>
           <ChatMessages
